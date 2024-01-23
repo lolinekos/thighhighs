@@ -1,0 +1,24 @@
+{
+    "servers": {
+        "sshPort": 111,
+        "telnetPort": 4200,
+        "webPort": 1337
+    },
+    "limiter": {
+        "globalConcurrent": 10,
+        "hostLimit": {
+            "enabled": false,
+            "concurrent": 1,
+            "timeSeconds": 300
+        }
+    },
+    "protected": [
+        "1.1.*",
+        "*.fbi.gov",
+        "foo.*.com",
+        "255.*",
+        "10.*",
+        "0.*",
+        "224.*"
+    ]
+}

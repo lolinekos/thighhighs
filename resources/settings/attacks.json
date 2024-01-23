@@ -1,0 +1,62 @@
+[
+
+    {
+        "-": [
+            "This is an attack stub implement it into other methods to have them inhert it's settings",
+            "You can overwrite settings as well in the inherting method"
+        ],
+
+        "concurrents":5,
+
+        "name": "attackstub",
+        "isStub": true,
+        "description": "this is the method attack stub",
+        "customArguments": [{
+            "name": "port",
+            "type": "number",
+            "range": [
+                1, 65535
+            ],
+            "default": 80
+        }]
+    },
+
+    {
+        "name": "udp",
+        "permissions": ["test", "admin"],
+        "description": "this is a raw method",
+
+        "methodStub": "attackstub",
+
+        "suggest": {
+            "warn": true,
+            "org": ["OVH"],
+            "string": ["*"]
+        },
+
+        "customArguments": [{
+            "name": "len",
+            "type": "number",
+            "range": [64, 2000],
+            "default": 255
+        }],
+
+        "api": [
+            "https://1.1.1.1/api?host=${target}port=${port}&time=${time}&method=udp"
+        ]
+
+    },
+    
+    {
+        "name": "tcp",
+        "description": "this is a raw method",
+
+        "methodStub": "attackstub",
+
+        "api": [
+            "https://1.1.1.1/api?host=${target}port=${port}&time=${time}&method=udp"
+        ]
+
+    }
+
+]
