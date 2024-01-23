@@ -1,0 +1,18 @@
+===Command===
+name: online
+description: view online members
+===End===
+<*grey><yellow> +<white> current active sessions</>
+<atlas><?
+t = table("name", "host", "client", "ongoing")
+// t.style(table.dash)
+// t.boarder(false)
+for member : sessions() {
+    host = mask(member.ip,"*")
+    if my.permissionsHas("admin") {
+        host = member.ip
+    }
+    t.row(member.username, host, member.client, member.ongoing())
+}
+t.display()
+?>
