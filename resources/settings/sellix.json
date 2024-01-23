@@ -1,0 +1,11 @@
+{
+    "secret":"xxxxxxxxxxxxxxxxxxxxxxxxx",
+    "products":[
+        {
+            "productId":"xxxxxxxxxxxxx",
+            "timelimit":120,
+            "concurrents":1,
+            "expiry":30
+        }
+    ]
+}
