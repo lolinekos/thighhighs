@@ -1,0 +1,15 @@
+\x1bc
+
+                     <white>██<atlas>▓     ▒<white>█████    <white>▄████  <white>██<atlas>▓ <white>███▄    █ 
+                    <atlas>▓<white>██<atlas>▒    ▒<white>██<atlas>▒  <white>██<atlas>▒ <white>██<atlas>▒ <white>▀█<atlas>▒▓<white>██<atlas>▒ <white>██ ▀█   █ 
+                    <atlas>▒<white>██<atlas>░    ▒<white>██<atlas>░  <white>██<atlas>▒▒<white>██<atlas>░<white>▄▄▄<atlas>░▒<white>██<atlas>▒▓<white>██  ▀█ ██<atlas>▒
+                    <atlas>▒<white>██<atlas>░    ▒<white>██   ██<atlas>░░▓<white>█  ██<atlas>▓░<white>██<atlas>░▓<white>██<atlas>▒  <white>▐▌██<atlas>▒
+                    <atlas>░<white>██████<atlas>▒░ <white>████<atlas>▓▒░░▒▓<white>███▀<atlas>▒░<white>██<atlas>░▒<white>██<atlas>░   ▓<white>██<atlas>░
+                    <atlas>░ ▒░▓  ░░ ▒░▒░▒░  ░▒   ▒ ░▓  ░ ▒░   ▒ ▒ 
+                    <atlas>░ ░ ▒  ░  ░ ▒ ▒░   ░   ░  ▒ ░░ ░░   ░ ▒░
+                    <atlas>  ░ ░   ░ ░ ░ ▒  ░ ░   ░  ▒ ░   ░   ░ ░ 
+                    <atlas>    ░  ░    ░ ░        ░  ░           ░ 
+                                         
+</><?$"─"*80?><atlas>
+
+                Username :</> \x1b[30;47m<?$" "*40;cursor.left(40)?>
