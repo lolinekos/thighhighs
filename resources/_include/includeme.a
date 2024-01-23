@@ -1,7 +1,0 @@
-file has been included<?
-    function funny() {
-        if my.hasPermission("vip") {
-            echo("lmfao")
-        }
-    }
-?>

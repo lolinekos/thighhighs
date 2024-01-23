@@ -1,1 +1,0 @@
-Any folder beginning with _ will be ignored by the command you can use this to organize your files.

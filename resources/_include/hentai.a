@@ -1,6 +1,0 @@
-<?
-function hentai() {
-    link = getjson("https://purrbot.site/api/img/nsfw/fuck/gif").link
-    gif.ansi(link,3)
-    return link
-}
