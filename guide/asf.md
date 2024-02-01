@@ -17,6 +17,10 @@
 > >       - cooldown : `int`
 > >       - datef : `func(string) string`\
 *format the date using template*
+> >       - permissionsHas: `func(string|int) bool`\
+*use role name or for example member.admin, member.modify, member.reseller*
+> >       - ongoing: `func() int`\
+*check if a user has permissions*
 > >   - **Cursor**\
 *terminal cursor movement*
 > >       - up : `func([int])`
@@ -24,15 +28,44 @@
 > >       - left : `func([int])`
 > >       - right : `func([int])`
 > >       - pos : `func(int, int)`
-> >   - **Table**
+> >   - **Table** `func(...string)`
 > >     - row : `func(...any)`
+> >     - column : `func(bool)`
+> >     - boarder : `func(bool)`
+> >     - style : `func(tableStyle)`\
+*you can use `table.dash` `table.double` `table.bright` `table.dark`*
 > >     - display : `func()`\
 *show current table*
 > >   - **Gif** \
 *display gifs*
 > >     - ansi : `func(string)` 
 > >     - braille : `func(string)` 
-> >     - ascii : `func(string)` 
+> >     - ascii : `func(string)`
+> >   - **image** \
+*display images*
+> >     - ansi : `func(string)` 
+> >     - braille : `func(string)` 
+> >     - ascii : `func(string)`
+> >   - **Attack** \
+*used when attacking and returned from ongoing()*
+> >     - target : `string`
+> >     - duration : `int`
+> >     - method : `string`
+> >     - org : `string`
+> >     - isp : `string`
+> >     - countryCode : `string`
+> >     - as : `string`
+> >     - status : `string`
+> >     - sender : `int`\
+*sender id*
+> >     - region : `string`
+> >   - **Method** 
+> >     - name : `string`
+> >     - description : `string`
+> >     - permissions : `[]any`
+> >     - timelimit : `int`
+> >     - group : `string`\
+*used for limiting concurrent usage*
 > >   - **Image**\
 *display images*
 > >     - ansi : `func(string)` 
@@ -48,6 +81,9 @@
 *array populated by range [1,2,3] for range(3)*
 > >     - exit `func()`\
 *exit current file*
+> >     - sessions `func() []member`
+> >     - ongoing `func() []attack`
+> >     - methods `func() []methods`
 > ## Concepts
 > > ### Functions
 > > anon args
@@ -109,8 +145,12 @@
 > > Echo Shorthand
 > > ```php
 > > <? $ "some string to output" ?>
-> > or just
+> > # Or just
 > > <?$var?>
+> > # You can also do this
+> > $var
+> > # But you muse use {} if there are no spaces
+> > [${var}]
 > > ```
 > > 
 > > 
