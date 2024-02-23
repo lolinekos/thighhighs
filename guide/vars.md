@@ -1,4 +1,4 @@
-# Example variables
+# Example variables & functions
 You can display use these like this:\
 ```sh
 <?$my.username?>
@@ -41,17 +41,24 @@ ${city}
 ```php
 # You can use a URL or a file from within ./commands
 
+// Convert gifs to terminal animantions
 <?gif.ansi("file.gif")?>
 <?gif.braille("file.gif")?>
 <?gif.ascii("file.gif")?>
 
-<?image.ansi("file.gif")?>
+// Convert images to terminal art
+<?image.ansi("file.png")?>
 <?image.braille("file.gif")?>
-<?image.ascii("file.gif")?>
+<?image.ascii("file.jpg")?>
 
 ```
 ### Misc
 ```sh
+# botcount
+${bot.count()}
+
+#Current date
+${date()}
 # View Number of online members
 ${len(online())}
 # View all Ongoing

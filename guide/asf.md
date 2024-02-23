@@ -21,6 +21,8 @@
 *use role name or for example member.admin, member.modify, member.reseller*
 > >       - ongoing: `func() int`\
 *check if a user has permissions*
+> >       - childCount `func()` int\
+*count of child members created by member*
 > >   - **Cursor**\
 *terminal cursor movement*
 > >       - up : `func([int])`
@@ -71,6 +73,13 @@
 > >     - ansi : `func(string)` 
 > >     - braille : `func(string)` 
 > >     - ascii : `func(string)` 
+> >   - **Alos**\
+*wrapper for alos client escapes*
+> >     - transparency `func(int)`\
+*set window transparency*
+> >     - showButton `func(button, bool)`\
+Buttons: `alos.allButtons` `alos.minimize` `alos.fullScreen` `alos.exit`\
+Example: `alos.showButton(alos.allButtons, false)`
 > > - ### Functions
 > >     - getjson `func(string) class`\
  *generates an object based on json data in response*
@@ -121,11 +130,16 @@
 > > ```
 > > For
 > > ```php
+> > # Class iterator
+> > for i : thisClass {
+> >     echo(i.name, i.value)
+> > }
+> > # Array iterator
 > > for i : [1,2,3] {
 > > 
 > > }
 > > ```
-> > for loops must use an iterator array this is to discourage infinite loops
+> > for loops must use an iterator array or class this is to discourage infinite loops
 > > *if you think you are cablible instead try recursion!*
 > > ### Assertive
 > > Variable
@@ -149,8 +163,23 @@
 > > <?$var?>
 > > # You can also do this
 > > $var
-> > # But you muse use {} if there are no spaces
+> > # But you must use {} if there is no space afterwards
 > > [${var}]
+> > ```
+> > Try
+> > ```php
+> > # Try assert
+> > try a = 0 / 0
+> > # Try block
+> > try {
+> >     throw "fail"
+> > }
+> > # Try Catch
+> > try {
+> >     throw "fail"
+> > } catch e {
+> >     echo(e) # will echo fail
+> > }
 > > ```
 > > 
 > > 
