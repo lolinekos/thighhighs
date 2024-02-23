@@ -1,0 +1,10 @@
+{
+    "discord": {
+        "webhook": "https://discord.com/api/webhooks/xxxxxxx",
+        "footer": "thighhighs made by bleach"
+    },
+    "telegram": {
+        "token": "<token>",
+        "channel": -100000000000
+    }
+}
