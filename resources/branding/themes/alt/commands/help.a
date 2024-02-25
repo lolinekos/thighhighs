@@ -1,0 +1,24 @@
+===Command===
+name: help
+alias: ?, h
+description: show some info about commands
+===End===
+<*grey> <deeppink>!<white> Tip: You can type "ls" to see all commands, even in scope</><atlas>
+<deeppink><?
+/*
+using the table class to generate a table for the allowed commands of the user
+*/
+
+t = table("Name", "Description")
+t.style(table.dark)
+for cmd : commands() {
+    // only list if user has permissions
+    if my.permissionsHas(cmd.permissions) {
+        if cmd.description == "" {
+            cmd.description = "..."
+        }
+        t.row(cmd.name, cmd.description)
+    }
+}
+t.display()
+?>

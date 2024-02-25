@@ -1,0 +1,17 @@
+===Command===
+name: online
+description: view online members
+===End===
+<*grey><deeppink> +<white> current active sessions</>
+<deeppink><?
+t = table("name", "host", "client", "ongoing")
+t.style(table.dark)
+for m : sessions() {
+    host = mask(m.ip,"*")
+    if my.permissionsHas(member.admin) {
+        host = m.ip
+    }
+    t.row(m.username, host, m.client, m.ongoing())
+}
+t.display()
+?>

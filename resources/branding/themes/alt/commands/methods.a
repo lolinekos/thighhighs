@@ -1,0 +1,36 @@
+===Command===
+name: methods
+description: lists methods
+===End===
+<*grey><deeppink> +<white> list of registered methods</>
+<deeppink><?
+/*
+using the table class to generate a table for the allowed commands of the user
+*/
+
+i=0
+t = table("Name", "Description", "Maxtime")
+t.style(table.dark)
+for cmd : methods() {
+
+    // only list if user has permissions
+    if my.permissionsHas(cmd.permissions) {
+        if cmd.description == "" {
+            cmd.description = "..."
+        }
+        i++
+        t.row(cmd.name, cmd.description, cmd.timelimit)
+    }
+}
+
+if  i == 0 {
+    echo("There are no accessible methods to display\n")
+    exit()
+}
+
+t.display()
+
+if my.ongoing() >= my.concurrents {
+    echo("\nYou have no open slots")
+}
+?>

@@ -1,0 +1,32 @@
+===Command===
+name: test
+description: just a command for testing
+===End===
+<?$clear?><instagram>\x1b[4mHello World\x1b[24m
+<?/*
+Hello and welcome to thighhighs
+*/?>
+<?$"-"*80?>
+<instagram>
+
+<atlas>
+<*instagram><?$"#"*40?></><atlas>
+<?$"#"*40;cursor.left(30)?>some text to overwrite
+<?$"#"*40;cursor.right(30)?>far right
+<?$"#"*80?>
+
+</>
+
+Examples
+<red>text which is colored</> colors removed
+<*red>text which is colored</> colors removed
+
+Hexidecimal works too!
+<#970FF8>text which is colored</> colors removed
+
+<black><*instagram>Using the colors is super easy!</>
+<?
+//gif.braille("_gifs/welcome.gif")
+alos.transparency(alos.low)
+alos.showButton(alos.allButtons, false)
+?>
