@@ -35,3 +35,12 @@ Learn about the language
 Learn how to create commands
 > - [**Colors**](./guide/colors.md)\
 Learn how to add colors
+
+## Prices 
+> | Plan | Price |
+> |:---:|---|
+> | 2 Days     | $5 |
+> | 14 Days    | $20 |
+> | 1 Month    | $35 |
+> | 3 Months   | $80 |
+> | Lifetime   | $150 |
