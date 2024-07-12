@@ -1,0 +1,11 @@
+<?
+
+function adminsOnline() {
+    count = 0
+    for m : sessions() {
+        if m.permissionsHas(member.admin) {
+            count++
+        }
+    }
+    return count
+}

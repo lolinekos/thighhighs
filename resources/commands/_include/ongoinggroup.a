@@ -1,0 +1,20 @@
+<?
+
+function ongoingGroup(groupName string) {
+
+    /*
+        This function will count the number of ongoing attacks in a method group.
+        Method groups are the groups which have the maximum concurrents set for a method.
+        For example if udp has a method stub with 5 concurrents.
+
+        TLDR: this function is meant to be used in conjunction with method stubs
+    */
+
+    atkGroupI = 0
+    for attack : ongoing() {
+        if attack.group != groupName {
+            atkGroupI++
+        }
+    }
+    return atkGroupI
+}

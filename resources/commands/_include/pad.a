@@ -1,0 +1,16 @@
+<?
+function pad(length, value) {
+    /* 
+
+    Use it like this <?pad(15, my.username)?>
+
+    You can edit the color or boarder of the text below 
+
+    It will show {value} with grey curly brackets and yellow text.
+    If you want to change the colors just change grey and yellow.
+    To change the boarder edit the { and } that aren't part of ${v}
+    */
+    ?><grey>{<yellow>${v}<grey>}</><?
+    p = length - len(value) - 2
+    echo(" "*p)
+}

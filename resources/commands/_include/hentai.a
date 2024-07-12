@@ -1,6 +1,11 @@
 <?
 function hentai() {
-    link = getjson("https://purrbot.site/api/img/nsfw/fuck/gif").link
-    gif.ansi(link,3)
-    return link
+    try {
+        link = getjson("https://purrbot.site/api/img/nsfw/fuck/gif").link
+        gif.ansi(link,3)
+        return link
+    }
+    echo("failed to get gif\n")
+    return "error"
 }
+@

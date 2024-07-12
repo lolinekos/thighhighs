@@ -1,0 +1,31 @@
+<?
+    spin = ["/", "-", "\\", "|"]
+
+    isset pos {
+        //Only if is not set
+        pos=0
+    }
+
+    pos++
+
+    function spinner(){
+        return spin[pos%len(spin)]
+    }
+
+    function loading(x) {
+
+        /*
+            This function will display the spinner as a sort of loading icon.
+            Use the function with a number argument to set the number of times it will loop.
+        */
+
+        isset x {
+            x = 3
+        }
+
+        for range(5*x){
+            cursor.left()
+            echo(spinner())
+            x++
+        }
+    }
