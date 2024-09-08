@@ -1,5 +1,4 @@
-<?$clear?>
-                        <atlas> ▄▄▄</>·<atlas> ▄▄▄▄▄▄▄▄▄▄ ▄▄▄</>· <atlas> ▄▄</>· <atlas>▄</> •<atlas>▄ 
+<?$clear?>                        <atlas> ▄▄▄</>·<atlas> ▄▄▄▄▄▄▄▄▄▄ ▄▄▄</>· <atlas> ▄▄</>· <atlas>▄</> •<atlas>▄ 
                         <atlas>▐█ ▀█ </>•<atlas>██ </> •<atlas>██  ▐█ ▀█ ▐█ ▌</>▪<atlas>█▌▄▌</>▪
                         <atlas>▄█▀▀█  ▐█</>.▪ <atlas>▐█</>.▪<atlas>▄█▀▀█ ██ ▄▄▐▀▀▄</>·
                         <atlas>▐█ </>▪<atlas>▐▌ ▐█▌</>·<atlas> ▐█▌</>·<atlas>▐█ </>▪<atlas>▐▌▐███▌▐█</>.<atlas>█▌
@@ -11,13 +10,17 @@
                         <atlas>     ▀▀▀▀  ▀▀▀ ▀▀ █</>▪ <atlas>▀▀▀        
 </>
                     ┌──────────────────────────────────────┐
-                      <atlas>Host </>> <atlas>1.2.3.4
-                      <atlas>Duration </>> <atlas>30
-                      <atlas>Method </>> <atlas>udp
+                      <atlas>Host </>> <atlas>$target
+                      <atlas>Duration </>> <atlas>$duration
+                      <atlas>Method </>> <atlas>$method
                       
                       <atlas>Geo </>~
-                      </>  - <atlas>As </>> <atlas>foo
-                      </>  - <atlas>Org </>> <atlas>bar
-                      </>  - <atlas>Region </>> <atlas>michigan
-                      </>  - <atlas>Country </>> <atlas>america
-
+                      </>  - <atlas>Asn </>> <atlas>$as
+                      </>  - <atlas>Org </>> <atlas>$org
+                      </>  - <atlas>Region </>> <atlas>$region
+                      </>  - <atlas>Country </>> <atlas>$countryCode
+<?
+if mobile {
+  ?><yellow>Warning</> This attack may not work as this is a mobile ip address<?
+}
+?>
