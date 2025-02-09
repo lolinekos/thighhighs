@@ -4,20 +4,22 @@ description: current running attacks
 ===End===
 <*grey><yellow> +<white> current ongoing attacks</>
 <atlas><?
-t = table("sender" ,"host", "duration", "ends")
+t = table("sender" ,"host", "duration", "ends", "method", "org")
+//t.style(table.double)
+t.columns(false)
 attacks = ongoing()
-
-for attack : attacks {
-    if my.permissionsHas("admin") || attack.sender == my.username {
-        t.row(member(attack.sender).username, attack.host, attack.duration, attack.end)
-    } else {
-        t.row(mask(member(attack.sender).username,"#"), mask(attack.host,"*"), attack.duration, attack.end)
-    }
-}
-
 if len(attacks) == 0 {
     echo("No attacks are running\n")
     exit()
+}
+
+for attack : attacks {
+
+    if my.permissionsHas(member.admin) || attack.sender == my.username {
+        t.row(member(attack.sender).username, attack.target, attack.duration, attack.end, attack.method, attack.isp)
+    } else {
+        t.row(mask(member(attack.sender).username,"#"), mask(attack.target,"*"), attack.duration, attack.end, attack.method, mask(attack.isp,"*"))
+    }
 }
 
 t.display()
